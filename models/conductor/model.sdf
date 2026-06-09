@@ -8,10 +8,12 @@
 
     <link name="link">
 
-      <visual name="wire">
 
+      <!-- ===================== -->
+      <!-- MAIN CONDUCTOR CABLE -->
+      <!-- ===================== -->
+      <visual name="conductor_main">
         <pose>0 0 0 0 1.57 0</pose>
-
         <geometry>
           <cylinder>
             <radius>0.08</radius>
@@ -19,14 +21,85 @@
           </cylinder>
         </geometry>
         <material>
-  <ambient>0.85 0.85 0.85 1</ambient>
-  <diffuse>0.85 0.85 0.85 1</diffuse>
-</material>
-
+          <ambient>0.82 0.82 0.82 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
       </visual>
 
+      <!-- ===================== -->
+      <!-- CONDUCTOR SWAY -->
+      <!-- Slight visual offset to show catenary sag -->
+      <!-- ===================== -->
+      <visual name="conductor_middle">
+        <pose>0 0 -0.3 0 1.57 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.08</radius>
+            <length>19.5</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+          <diffuse>0.87 0.87 0.87 1</diffuse>
+        </material>
+      </visual>
+
+      <!-- ===================== -->
+      <!-- VIBRATION DAMPERS -->
+      <!-- ===================== -->
+      <visual name="damper_1">
+        <pose>-6 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.15 0.15 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.4 0.4 0.4 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="damper_2">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.15 0.15 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.4 0.4 0.4 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="damper_3">
+        <pose>6 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.15 0.15 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.4 0.4 0.4 1</diffuse>
+        </material>
+      </visual>
+
+      <!-- ===================== -->
+      <!-- COLLISION -->
+      <!-- ===================== -->
+      <collision name="collision">
+        <pose>0 0 0 0 1.57 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.1</radius>
+            <length>20</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
     </link>
-
   </model>
-
 </sdf>

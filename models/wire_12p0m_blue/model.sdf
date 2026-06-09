@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<sdf version="1.10"><model name="wire_12p0m_blue"><static>true</static>
+<link name="link"><visual name="wire">
+<geometry><cylinder><radius>0.04</radius><length>12.0</length></cylinder></geometry>
+<material><ambient>0.120 0.280 0.680 1</ambient>
+<diffuse>0.150 0.350 0.850 1</diffuse></material></visual></link></model></sdf>

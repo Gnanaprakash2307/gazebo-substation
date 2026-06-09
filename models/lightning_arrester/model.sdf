@@ -8,178 +8,139 @@
 
   <link name="tower">
 
-    <!-- ===================== -->
-    <!-- MAIN LEGS -->
-    <!-- ===================== -->
-
-    <visual name="leg1">
-      <pose>0.5 0.5 7.5 0 0 0</pose>
+    <!-- Galvanized support mast -->
+    <visual name="mast">
+      <pose>0 0 3 0 0 0</pose>
       <geometry>
         <box>
-          <size>0.12 0.12 15</size>
+          <size>0.25 0.25 6</size>
         </box>
       </geometry>
       <material>
-        <ambient>0.75 0.75 0.75 1</ambient>
-        <diffuse>0.75 0.75 0.75 1</diffuse>
+        <ambient>0.65 0.65 0.67 1</ambient>
+        <diffuse>0.75 0.75 0.77 1</diffuse>
+        <specular>0.35 0.35 0.35 1</specular>
       </material>
     </visual>
 
-    <visual name="leg2">
-      <pose>-0.5 0.5 7.5 0 0 0</pose>
+    <visual name="base_plate">
+      <pose>0 0 0.15 0 0 0</pose>
       <geometry>
         <box>
-          <size>0.12 0.12 15</size>
+          <size>0.8 0.8 0.3</size>
         </box>
       </geometry>
       <material>
-        <ambient>0.75 0.75 0.75 1</ambient>
-        <diffuse>0.75 0.75 0.75 1</diffuse>
-      </material>
-    </visual>
-
-    <visual name="leg3">
-      <pose>-0.5 -0.5 7.5 0 0 0</pose>
-      <geometry>
-        <box>
-          <size>0.12 0.12 15</size>
-        </box>
-      </geometry>
-      <material>
-        <ambient>0.75 0.75 0.75 1</ambient>
-        <diffuse>0.75 0.75 0.75 1</diffuse>
-      </material>
-    </visual>
-
-    <visual name="leg4">
-      <pose>0.5 -0.5 7.5 0 0 0</pose>
-      <geometry>
-        <box>
-          <size>0.12 0.12 15</size>
-        </box>
-      </geometry>
-      <material>
-        <ambient>0.75 0.75 0.75 1</ambient>
-        <diffuse>0.75 0.75 0.75 1</diffuse>
-      </material>
-    </visual>
-
-    <!-- ===================== -->
-    <!-- HORIZONTAL FRAMES -->
-    <!-- ===================== -->
-
-    <visual name="frame_bottom">
-      <pose>0 0 2.5 0 0 0</pose>
-      <geometry>
-        <box>
-          <size>1.2 1.2 0.08</size>
-        </box>
-      </geometry>
-    </visual>
-
-    <visual name="frame_mid1">
-      <pose>0 0 6 0 0 0</pose>
-      <geometry>
-        <box>
-          <size>1.2 1.2 0.08</size>
-        </box>
-      </geometry>
-    </visual>
-
-    <visual name="frame_mid2">
-      <pose>0 0 10 0 0 0</pose>
-      <geometry>
-        <box>
-          <size>1.2 1.2 0.08</size>
-        </box>
-      </geometry>
-    </visual>
-
-    <visual name="frame_top">
-      <pose>0 0 14.5 0 0 0</pose>
-      <geometry>
-        <box>
-          <size>1.2 1.2 0.08</size>
-        </box>
-      </geometry>
-    </visual>
-
-    <!-- ===================== -->
-    <!-- CROSS ARMS -->
-    <!-- ===================== -->
-
-    <visual name="crossarm_x">
-      <pose>0 0 15.5 0 0 0</pose>
-      <geometry>
-        <box>
-          <size>3 0.1 0.1</size>
-        </box>
-      </geometry>
-
-      <material>
-        <ambient>0.65 0.65 0.65 1</ambient>
+        <ambient>0.55 0.55 0.55 1</ambient>
         <diffuse>0.65 0.65 0.65 1</diffuse>
       </material>
     </visual>
 
-    <visual name="crossarm_y">
-      <pose>0 0 15.5 0 0 1.57</pose>
-      <geometry>
-        <box>
-          <size>3 0.1 0.1</size>
-        </box>
-      </geometry>
-
-      <material>
-        <ambient>0.65 0.65 0.65 1</ambient>
-        <diffuse>0.65 0.65 0.65 1</diffuse>
-      </material>
-    </visual>
-
-    <!-- ===================== -->
-    <!-- LIGHTNING SPIKE -->
-    <!-- ===================== -->
-
-    <visual name="lightning_rod">
-      <pose>0 0 17.5 0 0 0</pose>
+    <!-- Porcelain surge stack -->
+    <visual name="arrester_stack_1">
+      <pose>0 0 6.4 0 0 0</pose>
       <geometry>
         <cylinder>
-          <radius>0.04</radius>
-          <length>4</length>
+          <radius>0.12</radius>
+          <length>0.55</length>
         </cylinder>
       </geometry>
-
       <material>
-        <ambient>1 0 0 1</ambient>
-        <diffuse>1 0 0 1</diffuse>
+        <ambient>0.92 0.92 0.88 1</ambient>
+        <diffuse>0.97 0.97 0.93 1</diffuse>
+        <specular>0.35 0.35 0.35 1</specular>
       </material>
     </visual>
 
-    <!-- WARNING LIGHT -->
+    <visual name="arrester_stack_2">
+      <pose>0 0 7.0 0 0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.11</radius>
+          <length>0.55</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <ambient>0.92 0.92 0.88 1</ambient>
+        <diffuse>0.97 0.97 0.93 1</diffuse>
+      </material>
+    </visual>
 
-    <visual name="warning_light">
-      <pose>0 0 19.7 0 0 0</pose>
+    <visual name="arrester_stack_3">
+      <pose>0 0 7.6 0 0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.10</radius>
+          <length>0.55</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <ambient>0.92 0.92 0.88 1</ambient>
+        <diffuse>0.97 0.97 0.93 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- Lightning rod tip -->
+    <visual name="lightning_rod">
+      <pose>0 0 8.2 0 0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.015</radius>
+          <length>0.8</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <ambient>0.75 0.55 0.15 1</ambient>
+        <diffuse>0.85 0.65 0.2 1</diffuse>
+      </material>
+    </visual>
+
+    <visual name="rod_tip">
+      <pose>0 0 8.65 0 0 0</pose>
       <geometry>
         <sphere>
-          <radius>0.12</radius>
+          <radius>0.04</radius>
         </sphere>
       </geometry>
-
       <material>
-        <ambient>1 0 0 1</ambient>
-        <diffuse>1 0 0 1</diffuse>
+        <ambient>0.8 0.6 0.2 1</ambient>
+        <diffuse>0.9 0.7 0.25 1</diffuse>
       </material>
     </visual>
 
-    <!-- ===================== -->
-    <!-- COLLISION -->
-    <!-- ===================== -->
+    <!-- Ground conductor -->
+    <visual name="ground_conductor">
+      <pose>0.35 0.35 1.5 0 -0.785 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.012</radius>
+          <length>3.0</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <ambient>0.6 0.4 0.1 1</ambient>
+        <diffuse>0.7 0.5 0.15 1</diffuse>
+      </material>
+    </visual>
 
-    <collision name="collision">
-      <pose>0 0 7.5 0 0 0</pose>
+    <visual name="warning_tag">
+      <pose>0.35 0 4.5 0 0 0</pose>
       <geometry>
         <box>
-          <size>1.2 1.2 15</size>
+          <size>0.35 0.04 0.25</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>1 1 0 1</ambient>
+        <diffuse>1 1 0.1 1</diffuse>
+      </material>
+    </visual>
+
+    <collision name="collision">
+      <pose>0 0 3 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.5 0.5 6</size>
         </box>
       </geometry>
     </collision>

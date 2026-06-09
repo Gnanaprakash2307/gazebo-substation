@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+
+<sdf version="1.10">
+
+<model name="cable_trench">
+
+  <static>true</static>
+
+  <link name="link">
+
+    <!-- ===================== -->
+    <!-- CONCRETE TRENCH BODY -->
+    <!-- ===================== -->
+    <visual name="trench_main">
+      <pose>0 0 -0.25 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.0 20.0 0.5</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.6 0.6 0.6 1</ambient>
+        <diffuse>0.65 0.65 0.65 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+      </material>
+    </visual>
+
+    <!-- ===================== -->
+    <!-- CABLE DUCT LINERS -->
+    <!-- ===================== -->
+    <visual name="duct_left">
+      <pose>-0.2 0 -0.25 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.18 20.0 0.15</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.4 0.4 0.4 1</ambient>
+        <diffuse>0.45 0.45 0.45 1</diffuse>
+      </material>
+    </visual>
+
+    <visual name="duct_center">
+      <pose>0 0 -0.25 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.18 20.0 0.15</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.4 0.4 0.4 1</ambient>
+        <diffuse>0.45 0.45 0.45 1</diffuse>
+      </material>
+    </visual>
+
+    <visual name="duct_right">
+      <pose>0.2 0 -0.25 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.18 20.0 0.15</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.4 0.4 0.4 1</ambient>
+        <diffuse>0.45 0.45 0.45 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- ===================== -->
+    <!-- TRENCH COVER (GRATE) -->
+    <!-- ===================== -->
+    <visual name="cover_main">
+      <pose>0 0 0.05 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.1 20.2 0.1</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.5 0.5 0.5 1</ambient>
+        <diffuse>0.55 0.55 0.55 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- GRATING PATTERN -->
+    <visual name="grate_line_1">
+      <pose>-0.3 0 0.06 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.05 20.0 0.05</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.4 0.4 0.4 1</ambient>
+        <diffuse>0.45 0.45 0.45 1</diffuse>
+      </material>
+    </visual>
+
+    <visual name="grate_line_2">
+      <pose>0 0 0.06 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.05 20.0 0.05</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.4 0.4 0.4 1</ambient>
+        <diffuse>0.45 0.45 0.45 1</diffuse>
+      </material>
+    </visual>
+
+    <visual name="grate_line_3">
+      <pose>0.3 0 0.06 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.05 20.0 0.05</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.4 0.4 0.4 1</ambient>
+        <diffuse>0.45 0.45 0.45 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- ===================== -->
+    <!-- ACCESS JUNCTION BOX 1 -->
+    <!-- ===================== -->
+    <visual name="junction_1_body">
+      <pose>0 -8 0.3 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.2 1.2 0.3</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.5 0.5 0.5 1</ambient>
+        <diffuse>0.55 0.55 0.55 1</diffuse>
+      </material>
+    </visual>
+
+    <visual name="junction_1_cover">
+      <pose>0 -8 0.5 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.3 1.3 0.05</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.7 0.7 0 1</ambient>
+        <diffuse>0.8 0.8 0.1 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- ===================== -->
+    <!-- ACCESS JUNCTION BOX 2 -->
+    <!-- ===================== -->
+    <visual name="junction_2_body">
+      <pose>0 0 0.3 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.2 1.2 0.3</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.5 0.5 0.5 1</ambient>
+        <diffuse>0.55 0.55 0.55 1</diffuse>
+      </material>
+    </visual>
+
+    <visual name="junction_2_cover">
+      <pose>0 0 0.5 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.3 1.3 0.05</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.7 0.7 0 1</ambient>
+        <diffuse>0.8 0.8 0.1 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- ===================== -->
+    <!-- ACCESS JUNCTION BOX 3 -->
+    <!-- ===================== -->
+    <visual name="junction_3_body">
+      <pose>0 8 0.3 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.2 1.2 0.3</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.5 0.5 0.5 1</ambient>
+        <diffuse>0.55 0.55 0.55 1</diffuse>
+      </material>
+    </visual>
+
+    <visual name="junction_3_cover">
+      <pose>0 8 0.5 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.3 1.3 0.05</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.7 0.7 0 1</ambient>
+        <diffuse>0.8 0.8 0.1 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- ===================== -->
+    <!-- COLLISION -->
+    <!-- ===================== -->
+    <collision name="trench_collision">
+      <pose>0 0 -0.25 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.0 20.0 0.5</size>
+        </box>
+      </geometry>
+    </collision>
+
+    <collision name="cover_collision">
+      <pose>0 0 0.05 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.1 20.2 0.1</size>
+        </box>
+      </geometry>
+    </collision>
+
+  </link>
+
+</model>
+
+</sdf>

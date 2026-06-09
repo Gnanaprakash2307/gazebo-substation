@@ -21,18 +21,57 @@
       </geometry>
     </collision>
 
+    <!-- ===================== -->
+    <!-- CONCRETE FOUNDATION -->
+    <!-- ===================== -->
+    <visual name="foundation">
+      <pose>0 0 -0.4 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>10.5 6.5 0.8</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.6 0.6 0.6 1</ambient>
+        <diffuse>0.65 0.65 0.65 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+      </material>
+    </visual>
+
+    <collision name="foundation_collision">
+      <pose>0 0 -0.4 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>10.5 6.5 0.8</size>
+        </box>
+      </geometry>
+    </collision>
+
     <visual name="walls">
       <pose>0 0 1.75 0 0 0</pose>
-
       <geometry>
         <box>
           <size>10 6 3.5</size>
         </box>
       </geometry>
-
       <material>
-        <ambient>0.85 0.85 0.88 1</ambient>
-        <diffuse>0.78 0.78 0.80 1</diffuse>
+        <ambient>0.75 0.75 0.78 1</ambient>
+        <diffuse>0.85 0.85 0.88 1</diffuse>
+        <specular>0.2 0.2 0.2 1</specular>
+      </material>
+    </visual>
+
+    <!-- Wall edge trim -->
+    <visual name="wall_edge_bottom">
+      <pose>0 0 0.1 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>10.2 6.2 0.2</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.6 0.6 0.6 1</ambient>
+        <diffuse>0.7 0.7 0.7 1</diffuse>
       </material>
     </visual>
 
@@ -40,21 +79,31 @@
     <!-- ROOF -->
     <!-- ===================== -->
 
-    <visual name="roof">
-
+    <visual name="roof_main">
       <pose>0 0 3.65 0 0 0</pose>
-
       <geometry>
         <box>
-          <size>10.5 6.5 0.25</size>
+          <size>10.5 6.5 0.3</size>
         </box>
       </geometry>
-
       <material>
-        <ambient>0.2 0.2 0.2 1</ambient>
-        <diffuse>0.25 0.25 0.25 1</diffuse>
+        <ambient>0.15 0.15 0.15 1</ambient>
+        <diffuse>0.2 0.2 0.2 1</diffuse>
       </material>
+    </visual>
 
+    <!-- Roof edge -->
+    <visual name="roof_edge">
+      <pose>0 0 3.8 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>10.7 6.7 0.1</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.1 0.1 0.1 1</ambient>
+        <diffuse>0.15 0.15 0.15 1</diffuse>
+      </material>
     </visual>
 
     <!-- ===================== -->
@@ -120,42 +169,62 @@
     <!-- ENTRANCE DOOR -->
     <!-- ===================== -->
 
-    <visual name="door">
-
+    <visual name="door_frame">
       <pose>0 -3.02 1.1 0 0 0</pose>
-
       <geometry>
         <box>
-          <size>1.3 0.08 2.2</size>
+          <size>1.4 0.12 2.3</size>
         </box>
       </geometry>
-
       <material>
-        <ambient>0.35 0.2 0.1 1</ambient>
-        <diffuse>0.4 0.25 0.15 1</diffuse>
+        <ambient>0.25 0.15 0.08 1</ambient>
+        <diffuse>0.35 0.2 0.1 1</diffuse>
       </material>
+    </visual>
 
+    <visual name="door_handle">
+      <pose>0.5 -3.05 1.2 0 0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.05</radius>
+          <length>0.1</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <ambient>0.8 0.6 0.2 1</ambient>
+        <diffuse>0.9 0.7 0.3 1</diffuse>
+      </material>
     </visual>
 
     <!-- ===================== -->
     <!-- MAIN CONTROL CONSOLE -->
     <!-- ===================== -->
 
-    <visual name="console">
-
+    <visual name="console_main">
       <pose>0 0.5 0.8 0 0 0</pose>
-
       <geometry>
         <box>
-          <size>4 1.2 1</size>
+          <size>4.2 1.3 1</size>
         </box>
       </geometry>
-
       <material>
-        <ambient>0.15 0.15 0.15 1</ambient>
-        <diffuse>0.2 0.2 0.2 1</diffuse>
+        <ambient>0.1 0.1 0.1 1</ambient>
+        <diffuse>0.15 0.15 0.15 1</diffuse>
       </material>
+    </visual>
 
+    <!-- Console display screen area -->
+    <visual name="console_screen">
+      <pose>0 0.55 1.0 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>2.5 0.8 0.5</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.1 0.1 0.1 1</ambient>
+        <diffuse>0.15 0.15 0.15 1</diffuse>
+      </material>
     </visual>
 
     <!-- ===================== -->

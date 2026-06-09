@@ -8,36 +8,110 @@
 
   <link name="board">
 
-    <!-- POLE -->
-    <visual name="pole">
+    <!-- ===================== -->
+    <!-- MAIN SUPPORT POLE -->
+    <!-- ===================== -->
+    <visual name="pole_main">
       <pose>0 0 1.5 0 0 0</pose>
       <geometry>
         <box>
-          <size>0.2 0.2 3</size>
+          <size>0.25 0.25 3</size>
         </box>
       </geometry>
       <material>
-        <ambient>0.3 0.3 0.3 1</ambient>
+        <ambient>0.25 0.25 0.25 1</ambient>
+        <diffuse>0.35 0.35 0.35 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+      </material>
+    </visual>
+
+    <!-- Pole base foot -->
+    <visual name="pole_base">
+      <pose>0 0 0.15 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.4 0.4 0.3</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.2 0.2 0.2 1</ambient>
         <diffuse>0.3 0.3 0.3 1</diffuse>
       </material>
     </visual>
 
-    <!-- BOARD -->
-    <visual name="sign">
-
+    <!-- ===================== -->
+    <!-- INFORMATION SIGN BOARD -->
+    <!-- ===================== -->
+    <visual name="sign_main">
       <pose>0 0 3.2 0 0 0</pose>
-
       <geometry>
         <box>
-          <size>4 0.2 1.5</size>
+          <size>4.2 0.08 1.6</size>
         </box>
       </geometry>
-
       <material>
-        <ambient>0 0 0.6 1</ambient>
+        <ambient>0 0 0.5 1</ambient>
         <diffuse>0 0 0.6 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
       </material>
+    </visual>
 
+    <!-- White text area background -->
+    <visual name="sign_text_area">
+      <pose>0 -0.04 3.2 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>4 0.05 1.5</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.95 0.95 0.95 1</ambient>
+        <diffuse>1 1 1 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- Sign border frame -->
+    <visual name="sign_border">
+      <pose>0 -0.05 3.2 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>4.3 0.03 1.7</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.15 0.15 0.15 1</ambient>
+        <diffuse>0.25 0.25 0.25 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- ===================== -->
+    <!-- LIGHT FIXTURE (NIGHT ILLUMINATION) -->
+    <!-- ===================== -->
+    <visual name="light_fixture">
+      <pose>0 -0.25 3.5 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.3 0.15 0.15</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.3 0.3 0.3 1</ambient>
+        <diffuse>0.4 0.4 0.4 1</diffuse>
+      </material>
+    </visual>
+
+    <visual name="light_bulb">
+      <pose>0 -0.32 3.5 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.08</radius>
+        </sphere>
+      </geometry>
+      <material>
+        <ambient>1 1 0.8 1</ambient>
+        <diffuse>1 1 0.9 1</diffuse>
+        <emissive>0.8 0.8 0.6 0.5</emissive>
+      </material>
     </visual>
 
   </link>

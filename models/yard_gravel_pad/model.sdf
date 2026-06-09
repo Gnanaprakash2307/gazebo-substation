@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<sdf version="1.10">
+  <model name="yard_gravel_pad">
+    <static>true</static>
+    <link name="link">
+      <visual name="gravel_surface">
+        <pose>0 0 0.02 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>14 10 0.04</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://ground/materials/scripts</uri>
+            <uri>model://ground/materials/textures</uri>
+            <name>Gazebo/Gravel</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="concrete_curb">
+        <pose>0 0 0.06 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>14.2 10.2 0.04</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.55 0.55 1</ambient>
+          <diffuse>0.65 0.65 0.65 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -8,33 +8,179 @@
 
     <link name="link">
 
-      <visual name="pad">
-
+      <!-- ===================== -->
+      <!-- CONCRETE PAD BASE -->
+      <!-- ===================== -->
+      <visual name="pad_main">
         <pose>0 0 0.25 0 0 0</pose>
-
         <geometry>
           <box>
-            <size>6 4 0.5</size>
+            <size>6.2 4.2 0.5</size>
           </box>
         </geometry>
-
         <material>
-          <ambient>0.75 0.75 0.75 1</ambient>
+          <ambient>0.65 0.65 0.65 1</ambient>
           <diffuse>0.75 0.75 0.75 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
         </material>
-
       </visual>
 
+      <!-- ===================== -->
+      <!-- EDGE BEVELS (3D EFFECT) -->
+      <!-- ===================== -->
+      <visual name="edge_bevel_1">
+        <pose>-3.1 0 0.48 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 4.2 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.55 0.55 1</ambient>
+          <diffuse>0.65 0.65 0.65 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="edge_bevel_2">
+        <pose>3.1 0 0.48 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 4.2 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.55 0.55 1</ambient>
+          <diffuse>0.65 0.65 0.65 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="edge_bevel_3">
+        <pose>0 -2.1 0.48 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>6.2 0.1 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.55 0.55 1</ambient>
+          <diffuse>0.65 0.65 0.65 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="edge_bevel_4">
+        <pose>0 2.1 0.48 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>6.2 0.1 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.55 0.55 1</ambient>
+          <diffuse>0.65 0.65 0.65 1</diffuse>
+        </material>
+      </visual>
+
+      <!-- ===================== -->
+      <!-- ANCHOR BOLT AREAS -->
+      <!-- ===================== -->
+      <visual name="anchor_bolt_1">
+        <pose>-2.5 -1.5 0.35 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.08</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.4 0.4 0.4 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="anchor_bolt_2">
+        <pose>2.5 -1.5 0.35 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.08</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.4 0.4 0.4 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="anchor_bolt_3">
+        <pose>-2.5 1.5 0.35 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.08</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.4 0.4 0.4 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="anchor_bolt_4">
+        <pose>2.5 1.5 0.35 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.08</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.4 0.4 0.4 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+        </material>
+      </visual>
+
+      <!-- ===================== -->
+      <!-- IDENTIFICATION MARKING -->
+      <!-- ===================== -->
+      <visual name="marking_area">
+        <pose>0 2.05 0.48 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.5 0.08 0.3</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1 1 0.8 1</ambient>
+          <diffuse>1 1 0.9 1</diffuse>
+        </material>
+      </visual>
+
+      <!-- ===================== -->
+      <!-- OIL RETENTION BORDER -->
+      <!-- ===================== -->
+      <visual name="drain_sump">
+        <pose>0 0 -0.1 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>6.5 4.5 0.15</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.4 0.4 0.4 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+        </material>
+      </visual>
+
+      <!-- ===================== -->
+      <!-- COLLISION -->
+      <!-- ===================== -->
       <collision name="collision">
-
         <pose>0 0 0.25 0 0 0</pose>
-
         <geometry>
           <box>
             <size>6 4 0.5</size>
           </box>
         </geometry>
-
       </collision>
 
     </link>
