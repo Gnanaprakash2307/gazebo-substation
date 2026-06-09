@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<sdf version="1.10">
+
+  <model name="ground">
+
+    <static>true</static>
+
+    <link name="link">
+
+      <!-- VISUAL -->
+      <visual name="visual">
+
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>100 100</size>
+          </plane>
+        </geometry>
+
+        <!-- DARK INDUSTRIAL COLOR -->
+        <material>
+  <pbr>
+    <metal>
+      <albedo_map>materials/textures/gravel.jpg</albedo_map>
+    </metal>
+  </pbr>
+</material>
+
+      </visual>
+
+      <!-- COLLISION -->
+      <collision name="collision">
+
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>100 100</size>
+          </plane>
+        </geometry>
+
+      </collision>
+
+    </link>
+
+  </model>
+
+</sdf>

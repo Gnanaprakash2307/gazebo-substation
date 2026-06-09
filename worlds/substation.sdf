@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+
+<sdf version="1.10">
+
+<world name="substation">
+
+  <!-- GROUND -->
+  <include>
+    <uri>model://ground</uri>
+    <name>ground</name>
+    <pose>0 0 -0.1 0 0 0</pose>
+  </include>
+
+  <!-- FENCE -->
+  <include><uri>model://fence</uri><name>fence_north</name><pose>0 18 1.25 0 0 0</pose></include>
+  <include><uri>model://fence</uri><name>fence_south</name><pose>0 -18 1.25 0 0 0</pose></include>
+  <include><uri>model://fence</uri><name>fence_east</name><pose>18 0 1.25 0 0 1.57</pose></include>
+  <include><uri>model://fence</uri><name>fence_west</name><pose>-18 0 1.25 0 0 1.57</pose></include>
+
+  <!-- TRANSMISSION TOWERS -->
+  <include>
+    <uri>model://tower</uri>
+    <name>tower_left</name>
+    <pose>-5 14 8 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://tower</uri>
+    <name>tower_right</name>
+    <pose>5 14 8 0 0 0</pose>
+  </include>
+
+  <!-- 3 PHASE CONDUCTORS -->
+  <include><uri>model://conductor</uri><name>left_A</name><pose>-5 14 10.0 0 0 0</pose></include>
+  <include><uri>model://conductor</uri><name>left_B</name><pose>-5 14 10.6 0 0 0</pose></include>
+  <include><uri>model://conductor</uri><name>left_C</name><pose>-5 14 11.2 0 0 0</pose></include>
+
+  <include><uri>model://conductor</uri><name>right_A</name><pose>5 14 10.0 0 0 0</pose></include>
+  <include><uri>model://conductor</uri><name>right_B</name><pose>5 14 10.6 0 0 0</pose></include>
+  <include><uri>model://conductor</uri><name>right_C</name><pose>5 14 11.2 0 0 0</pose></include>
+
+  <!-- BUSBAR SUPPORTS -->
+  <include><uri>model://busbar_support</uri><name>support_A_left</name><pose>-4 5 0 0 0 0</pose></include>
+  <include><uri>model://busbar_support</uri><name>support_A_right</name><pose>4 5 0 0 0 0</pose></include>
+
+  <include><uri>model://busbar_support</uri><name>support_B_left</name><pose>-4 7 0 0 0 0</pose></include>
+  <include><uri>model://busbar_support</uri><name>support_B_right</name><pose>4 7 0 0 0 0</pose></include>
+
+  <include><uri>model://busbar_support</uri><name>support_C_left</name><pose>-4 9 0 0 0 0</pose></include>
+  <include><uri>model://busbar_support</uri><name>support_C_right</name><pose>4 9 0 0 0 0</pose></include>
+
+  <!-- 3 PHASE BUSBARS -->
+  <include>
+    <uri>model://busbar</uri>
+    <name>busbar_A</name>
+    <pose>0 5 2.5 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://busbar</uri>
+    <name>busbar_B</name>
+    <pose>0 7 2.5 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://busbar</uri>
+    <name>busbar_C</name>
+    <pose>0 9 2.5 0 0 0</pose>
+  </include>
+
+  <!-- BREAKERS -->
+  <include>
+    <uri>model://breaker</uri>
+    <name>breaker_left</name>
+    <pose>-4 0 1 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://breaker</uri>
+    <name>breaker_center</name>
+    <pose>0 0 1 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://breaker</uri>
+    <name>breaker_right</name>
+    <pose>4 0 1 0 0 0</pose>
+  </include>
+
+  <!-- TRANSFORMER PADS -->
+  <include>
+    <uri>model://transformer_pad</uri>
+    <name>pad_left</name>
+    <pose>-4 -7 0 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://transformer_pad</uri>
+    <name>pad_right</name>
+    <pose>4 -7 0 0 0 0</pose>
+  </include>
+
+  <!-- TRANSFORMERS -->
+  <include>
+    <uri>model://transformer</uri>
+    <name>transformer_left</name>
+    <pose>-4 -7 1 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://transformer</uri>
+    <name>transformer_right</name>
+    <pose>4 -7 1 0 0 0</pose>
+  </include>
+
+  <!-- CONTROL ROOM -->
+  <include>
+    <uri>model://control_room</uri>
+    <name>control_room_main</name>
+    <pose>0 -15 1.5 0 0 0</pose>
+  </include>
+
+  <!-- LIGHTNING TOWERS -->
+  <include>
+    <uri>model://lightning_arrester</uri>
+    <name>arrester_left</name>
+    <pose>-12 13 0 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://lightning_arrester</uri>
+    <name>arrester_right</name>
+    <pose>12 13 0 0 0 0</pose>
+  </include>
+
+  <!-- NAME BOARD -->
+  <include>
+    <uri>model://name_board</uri>
+    <name>substation_name_board</name>
+    <pose>0 15.5 0 0 0 0</pose>
+  </include>
+
+  <!-- SUN -->
+  <light name="sun" type="directional">
+    <pose>0 0 50 0 0 0</pose>
+    <cast_shadows>true</cast_shadows>
+    <diffuse>1 1 1 1</diffuse>
+    <specular>0.4 0.4 0.4 1</specular>
+    <direction>-0.5 -0.4 -1</direction>
+  </light>
+
+</world>
+
+</sdf>

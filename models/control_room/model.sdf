@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+
+<sdf version="1.10">
+
+<model name="control_room">
+
+  <static>true</static>
+
+  <link name="body">
+
+    <!-- ===================== -->
+    <!-- MAIN BUILDING -->
+    <!-- ===================== -->
+
+    <collision name="collision">
+      <pose>0 0 1.75 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>10 6 3.5</size>
+        </box>
+      </geometry>
+    </collision>
+
+    <visual name="walls">
+      <pose>0 0 1.75 0 0 0</pose>
+
+      <geometry>
+        <box>
+          <size>10 6 3.5</size>
+        </box>
+      </geometry>
+
+      <material>
+        <ambient>0.85 0.85 0.88 1</ambient>
+        <diffuse>0.78 0.78 0.80 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- ===================== -->
+    <!-- ROOF -->
+    <!-- ===================== -->
+
+    <visual name="roof">
+
+      <pose>0 0 3.65 0 0 0</pose>
+
+      <geometry>
+        <box>
+          <size>10.5 6.5 0.25</size>
+        </box>
+      </geometry>
+
+      <material>
+        <ambient>0.2 0.2 0.2 1</ambient>
+        <diffuse>0.25 0.25 0.25 1</diffuse>
+      </material>
+
+    </visual>
+
+    <!-- ===================== -->
+    <!-- FRONT GLASS WINDOW -->
+    <!-- ===================== -->
+
+    <visual name="front_window">
+
+      <pose>0 3.02 1.9 0 0 0</pose>
+
+      <geometry>
+        <box>
+          <size>7 0.05 1.8</size>
+        </box>
+      </geometry>
+
+      <material>
+        <ambient>0.2 0.5 0.8 0.5</ambient>
+        <diffuse>0.3 0.6 0.9 0.5</diffuse>
+      </material>
+
+    </visual>
+
+    <!-- ===================== -->
+    <!-- SIDE WINDOWS -->
+    <!-- ===================== -->
+
+    <visual name="left_window">
+
+      <pose>-5.02 0 1.8 0 0 1.57</pose>
+
+      <geometry>
+        <box>
+          <size>3 0.05 1.5</size>
+        </box>
+      </geometry>
+
+      <material>
+        <ambient>0.2 0.5 0.8 0.5</ambient>
+        <diffuse>0.3 0.6 0.9 0.5</diffuse>
+      </material>
+
+    </visual>
+
+    <visual name="right_window">
+
+      <pose>5.02 0 1.8 0 0 1.57</pose>
+
+      <geometry>
+        <box>
+          <size>3 0.05 1.5</size>
+        </box>
+      </geometry>
+
+      <material>
+        <ambient>0.2 0.5 0.8 0.5</ambient>
+        <diffuse>0.3 0.6 0.9 0.5</diffuse>
+      </material>
+
+    </visual>
+
+    <!-- ===================== -->
+    <!-- ENTRANCE DOOR -->
+    <!-- ===================== -->
+
+    <visual name="door">
+
+      <pose>0 -3.02 1.1 0 0 0</pose>
+
+      <geometry>
+        <box>
+          <size>1.3 0.08 2.2</size>
+        </box>
+      </geometry>
+
+      <material>
+        <ambient>0.35 0.2 0.1 1</ambient>
+        <diffuse>0.4 0.25 0.15 1</diffuse>
+      </material>
+
+    </visual>
+
+    <!-- ===================== -->
+    <!-- MAIN CONTROL CONSOLE -->
+    <!-- ===================== -->
+
+    <visual name="console">
+
+      <pose>0 0.5 0.8 0 0 0</pose>
+
+      <geometry>
+        <box>
+          <size>4 1.2 1</size>
+        </box>
+      </geometry>
+
+      <material>
+        <ambient>0.15 0.15 0.15 1</ambient>
+        <diffuse>0.2 0.2 0.2 1</diffuse>
+      </material>
+
+    </visual>
+
+    <!-- ===================== -->
+    <!-- ELECTRICAL CABINET -->
+    <!-- ===================== -->
+
+    <visual name="cabinet">
+
+      <pose>-3 0 1 0 0 0</pose>
+
+      <geometry>
+        <box>
+          <size>1 0.8 2</size>
+        </box>
+      </geometry>
+
+      <material>
+        <ambient>0.7 0.7 0.7 1</ambient>
+        <diffuse>0.75 0.75 0.75 1</diffuse>
+      </material>
+
+    </visual>
+
+    <!-- ===================== -->
+    <!-- SUBSTATION NAME BOARD -->
+    <!-- ===================== -->
+
+    <visual name="name_panel">
+
+      <pose>0 3.05 3.0 0 0 0</pose>
+
+      <geometry>
+        <box>
+          <size>4 0.05 0.5</size>
+        </box>
+      </geometry>
+
+      <material>
+        <ambient>0.1 0.1 0.4 1</ambient>
+        <diffuse>0.15 0.15 0.5 1</diffuse>
+      </material>
+
+    </visual>
+
+  </link>
+
+</model>
+
+</sdf>

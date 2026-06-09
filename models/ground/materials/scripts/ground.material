@@ -1,0 +1,14 @@
+material Gazebo/Gravel
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture gravel.jpg
+        scale 10 10
+      }
+    }
+  }
+}

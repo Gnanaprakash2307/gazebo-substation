@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+
+<sdf version="1.10">
+
+<model name="lightning_arrester">
+
+  <static>true</static>
+
+  <link name="tower">
+
+    <!-- ===================== -->
+    <!-- MAIN LEGS -->
+    <!-- ===================== -->
+
+    <visual name="leg1">
+      <pose>0.5 0.5 7.5 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.12 0.12 15</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.75 0.75 0.75 1</ambient>
+        <diffuse>0.75 0.75 0.75 1</diffuse>
+      </material>
+    </visual>
+
+    <visual name="leg2">
+      <pose>-0.5 0.5 7.5 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.12 0.12 15</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.75 0.75 0.75 1</ambient>
+        <diffuse>0.75 0.75 0.75 1</diffuse>
+      </material>
+    </visual>
+
+    <visual name="leg3">
+      <pose>-0.5 -0.5 7.5 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.12 0.12 15</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.75 0.75 0.75 1</ambient>
+        <diffuse>0.75 0.75 0.75 1</diffuse>
+      </material>
+    </visual>
+
+    <visual name="leg4">
+      <pose>0.5 -0.5 7.5 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>0.12 0.12 15</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.75 0.75 0.75 1</ambient>
+        <diffuse>0.75 0.75 0.75 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- ===================== -->
+    <!-- HORIZONTAL FRAMES -->
+    <!-- ===================== -->
+
+    <visual name="frame_bottom">
+      <pose>0 0 2.5 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.2 1.2 0.08</size>
+        </box>
+      </geometry>
+    </visual>
+
+    <visual name="frame_mid1">
+      <pose>0 0 6 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.2 1.2 0.08</size>
+        </box>
+      </geometry>
+    </visual>
+
+    <visual name="frame_mid2">
+      <pose>0 0 10 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.2 1.2 0.08</size>
+        </box>
+      </geometry>
+    </visual>
+
+    <visual name="frame_top">
+      <pose>0 0 14.5 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.2 1.2 0.08</size>
+        </box>
+      </geometry>
+    </visual>
+
+    <!-- ===================== -->
+    <!-- CROSS ARMS -->
+    <!-- ===================== -->
+
+    <visual name="crossarm_x">
+      <pose>0 0 15.5 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>3 0.1 0.1</size>
+        </box>
+      </geometry>
+
+      <material>
+        <ambient>0.65 0.65 0.65 1</ambient>
+        <diffuse>0.65 0.65 0.65 1</diffuse>
+      </material>
+    </visual>
+
+    <visual name="crossarm_y">
+      <pose>0 0 15.5 0 0 1.57</pose>
+      <geometry>
+        <box>
+          <size>3 0.1 0.1</size>
+        </box>
+      </geometry>
+
+      <material>
+        <ambient>0.65 0.65 0.65 1</ambient>
+        <diffuse>0.65 0.65 0.65 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- ===================== -->
+    <!-- LIGHTNING SPIKE -->
+    <!-- ===================== -->
+
+    <visual name="lightning_rod">
+      <pose>0 0 17.5 0 0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.04</radius>
+          <length>4</length>
+        </cylinder>
+      </geometry>
+
+      <material>
+        <ambient>1 0 0 1</ambient>
+        <diffuse>1 0 0 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- WARNING LIGHT -->
+
+    <visual name="warning_light">
+      <pose>0 0 19.7 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.12</radius>
+        </sphere>
+      </geometry>
+
+      <material>
+        <ambient>1 0 0 1</ambient>
+        <diffuse>1 0 0 1</diffuse>
+      </material>
+    </visual>
+
+    <!-- ===================== -->
+    <!-- COLLISION -->
+    <!-- ===================== -->
+
+    <collision name="collision">
+      <pose>0 0 7.5 0 0 0</pose>
+      <geometry>
+        <box>
+          <size>1.2 1.2 15</size>
+        </box>
+      </geometry>
+    </collision>
+
+  </link>
+
+</model>
+
+</sdf>

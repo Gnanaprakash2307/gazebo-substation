@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<sdf version="1.10">
+
+  <model name="tower">
+
+    <static>true</static>
+
+    <link name="link">
+
+      <visual name="tower_body">
+
+        <geometry>
+          <box>
+            <size>1 1 15</size>
+          </box>
+        </geometry>
+
+        <material>
+  <ambient>0.7 0.7 0.7 1</ambient>
+  <diffuse>0.7 0.7 0.7 1</diffuse>
+</material>
+      </visual>
+
+      <collision name="collision">
+
+        <geometry>
+          <box>
+            <size>1 1 15</size>
+          </box>
+        </geometry>
+
+      </collision>
+
+    </link>
+
+  </model>
+
+</sdf>
